@@ -1,0 +1,29 @@
+#!name=AI分流
+#!desc=对AI相关服务进行分流
+#!author=ChenDaYi
+#############################################
+# 分流作用：对OpenAI相关服务进行分流
+# 重要提示：如果不想新增一个策略组，可以设置策略偏好
+# 更新时间：2023.05.21 10:38
+# 策略选择：选择支持OpenAI的地区
+#############################################
+
+host, cdn.auth0.com, AI
+HOST, challenges.cloudflare.com,AI
+host, openaiapi-site.azureedge.net, AI
+host-suffix, ai.com, AI
+host-suffix, openai.com, AI
+host-suffix, identrust.com,OpenAI
+
+host-suffix, vimeo.com, AI
+host-suffix, vimeocdn.com, AI
+host-suffix, hcaptcha.com, AI
+host-suffix, akamaized.com, AI
+
+DOMAIN-SUFFIX, bing.com, AI
+DOMAIN-SUFFIX, openai.com, AI
+DOMAIN-SUFFIX, anthropic.com, AI
+DOMAIN-SUFFIX, claude.ai, AI
+DOMAIN-SUFFIX, openaiapi-site.azureedge.net, AI
+DOMAIN-SUFFIX, azurecomcdn.azureedge.net, AI
+DOMAIN-SUFFIX, bard.google.com, AI
